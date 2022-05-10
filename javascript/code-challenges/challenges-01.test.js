@@ -19,11 +19,11 @@ Write a function named `addExclamation` that takes an array of strings, and retu
 Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
 
- const addExclamation = (arr) => {
-   let localArr = [];
-   arr.forEach(arrStr => localArr.push(arrStr + '!'));
-   return localArr;
- };
+const addExclamation = (arr) => {
+  let localArr = [];
+  arr.forEach(arrStr => localArr.push(arrStr + '!'));
+  return localArr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -31,11 +31,11 @@ Write a function named `allUpperCase` that takes an array of strings, and return
 Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
 ------------------------------------------------------------------------------------------------ */
 
- const allUpperCase = (arr) => {
-   let localArr = [];
-   arr.forEach(arrStr => localArr.push(arrStr.toUpperCase()));
-   return localArr;
- };
+const allUpperCase = (arr) => {
+  let localArr = [];
+  arr.forEach(arrStr => localArr.push(arrStr.toUpperCase()));
+  return localArr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
