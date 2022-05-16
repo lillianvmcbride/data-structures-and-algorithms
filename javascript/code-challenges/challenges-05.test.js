@@ -10,8 +10,11 @@ should convert to ["Jane Doe", "James Bond"]
 Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
-const toLastNames = people => {
-  // Solution code here...
+const toLastNames = names => {
+  return names.map((person) => {
+    return `${person.firstName} ${person.lastName}`;
+  });
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -20,7 +23,8 @@ Write a function named addValues that, given an array of numbers as input, uses 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-  // Solution code here...
+  return arr.reduce((val1, val2) => val1 + val2, 0);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,17 +37,29 @@ Write a function named addPurchases that, given an array of objects as input, us
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
-  // Solution code here...
+
+  return arr.reduce((a, b) =>
+    a + b.purchasePrice
+  , 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
-Write a function named countNumberOfElements that, given an array as input, uses reduce to count the number of elements in the array.
+Write a function named countNumberOfElements that, given an array as input, uses reduce to count
+the number of elements in the array.
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
+/**
+ *
+ * @param {array} arr - numbers
+ * @returns {number} - number of elements in arr
+ */
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+
+  return arr.reduce((count) => {
+    return count + 1;
+  },0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,8 +118,13 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+
+  return arr.map((person) => {
+    return `${person.name}`;
+  });
+
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -112,7 +133,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  const array = str.split('');
+  const reversed = array.reduce((rev, char) => {
+    return char + rev;
+  }, '');
+  return reversed;
 };
 
 /* ------------------------------------------------------------------------------------------------
